@@ -1,0 +1,21 @@
+// Default fonts
+$fontDefault: Node, Helvetica, Arial, sans-serif;
+$fontHighlight: Node, Helvetica, sans-serif;
+
+// Defining font sizes
+$fontSmall: 14px;
+$fontBase: 18px;
+$fontMedium: 24px;
+$fontLarge: 36px;
+$fontXLarge: 48px;
+
+@font-face {
+  font-family: 'Node';
+  src: url('../fonts/Titillium-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Node';
+  font-weight: bold;
+  src: url('../fonts/Titillium-Bold.otf');
+}

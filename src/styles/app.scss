@@ -1,0 +1,36 @@
+/* Import variables */
+@import 'config/colors';
+@import 'config/typography';
+
+/* Import base styles */
+@import 'normalize';
+@import 'utils';
+@import 'global';
+
+/* Import components */
+
+@import 'components/modal';
+
+/* Import index modules */
+@import 'modules/home';
+
+html, body, .node-app, .app-body {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  background: #ECEDED;
+}
+
+a {
+  color: $colorThemeAlt;
+  background: none;
+  text-decoration: none;
+  outline: 0;
+
+  &:hover {
+    text-decoration: underline;
+    color: $colorThemeAlt;
+  }
+}

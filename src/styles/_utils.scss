@@ -1,0 +1,90 @@
+$medium: 620px !default;
+$wide: 800px !default;
+$wider: 1024px !default;
+$huge: 1600px !default;
+$mediumContainer: 620px !default;
+$wideContainer: 960px !default;
+
+@mixin media-query($media-query) {
+  @if $media-query == small {
+    @media only screen and (max-width: $medium - 1) { @content; }
+  }
+
+  @if $media-query == medium {
+    @media only screen and (min-width: $medium) { @content; }
+  }
+
+  @if $media-query == medium-only {
+    @media only screen and (min-width: $medium) and (max-width: $wide - 1) { @content; }
+  }
+
+  @if $media-query == wide {
+    @media only screen and (min-width: $wide) { @content; }
+  }
+
+  @if $media-query == wider {
+    @media only screen and (min-width: $wider) { @content; }
+  }
+
+  @if $media-query == huge {
+    @media only screen and (min-width: $huge) { @content; }
+  }
+}
+
+@mixin small-only { @include media-query(small) { @content }; }
+@mixin medium { @include media-query(medium) { @content }; }
+@mixin medium-only { @include media-query(medium-only) { @content }; }
+@mixin wide { @include media-query(wide) { @content }; }
+@mixin huge { @include media-query(huge) { @content }; }
+
+// Mixin to constrain elements
+@mixin container($isRelative: false) {
+  box-sizing: border-box;
+
+  @if $isRelative {
+    position: relative;
+  }
+
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  @include medium {
+    padding-left: 4.4%;
+    padding-right: 4.4%;
+  }
+
+  @include wide {
+    padding-left: 4.4%;
+    padding-right: 4.4%;
+    max-width: $wideContainer;
+  }
+}
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.container {
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+}

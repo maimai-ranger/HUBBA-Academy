@@ -1,0 +1,94 @@
+.modal-dialog  {
+  .modal-content {
+    background: $colorTheme;
+    position: relative;
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 16px;
+      height: 16px;
+      background: url(../images/close.png) no-repeat;
+      background-size: 100%;
+      opacity: 1;
+      padding: 0px;
+    }
+  }
+  .modal-header {
+    color: white;
+    text-align: center;
+    border-bottom: 0;
+    padding: 30px 15px;
+  }
+  .modal-title {
+    text-transform: uppercase;
+  }
+  .modal-body {
+    color: white;
+    padding-top: 0;
+
+    form {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 480px;
+    }
+    label {
+      font-size: 12px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    input {
+      display: block;
+      width: 100%;
+      color: $colorTheme;
+      border-radius: 0;
+      height: 40px;
+    }
+    .input-error {
+      color: $colorError;
+      text-align: left;
+      margin: 5px 0 0;
+    }
+
+    p {
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto 5px;
+
+      a {
+        font-style: normal;
+        color: $colorThemeAlt;
+        cursor: pointer;
+      }
+    }
+  }
+  button {
+    display: block;
+    font-size: 18px;
+    height: auto;
+    width: 100%;
+    max-width: 340px;
+    padding: 20px;
+    line-height: 1;
+    margin: 0 auto 20px;
+  }
+
+  .modal-footer {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
+
+.input-error {
+  color: $colorError;
+  text-align: left;
+  margin: 5px 0 0;
+}

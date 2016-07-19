@@ -1,0 +1,97 @@
+/**
+*
+* Global
+*
+**/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+button {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+body {
+  font-family: $fontDefault;
+  font-size: $fontBase;
+  line-height: 1.1em; /* 26px */
+  font-weight: 300; // to thicken it a bit, we need to remove font-smoothing
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.main-container {
+  @include container(true);
+}
+
+.container {
+  @include container(true);
+}
+
+.container-medium {
+  @include medium {
+    @include container(true);
+  }
+}
+
+.container-small {
+  @include small-only {
+    @include container(true);
+  }
+}
+
+.content {
+  @include wide {
+    margin-right: 25.9%; // took this from the grid output - using @extend inside media-query is deprecated, need to figure out a better way to do this.
+
+    & pre {
+      margin-right: -25.9%;
+    }
+  }
+}
+
+a, button {
+  cursor: pointer;
+}
+
+
+ul.node-nav {
+  li {
+    display: inline-block;
+    margin-left: 20px;
+    height: 40px;
+    cusor: pointer;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    span {
+      padding: 10px 0px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    &.active, &:hover {
+      border-bottom: 2px solid $colorThemeAlt;
+    }
+
+  }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
