@@ -101,7 +101,7 @@ angular.module('app')
 
 (function() {
 
-angular.module('app').controller('HomeCtrl', ["$scope", "$uibModal", "Auth", "$state", "$filter", "$rootScope", "Browser", "Analytics", "lodash", function($scope, $uibModal, Auth, $state, $filter, $rootScope, Browser, Analytics, lodash) {
+angular.module('app').controller('HomeCtrl', ["$scope", "$uibModal", "$state", "$filter", "$rootScope", "Browser", "Analytics", "lodash", function($scope, $uibModal, $state, $filter, $rootScope, Browser, Analytics, lodash) {
 
 }]);
 
