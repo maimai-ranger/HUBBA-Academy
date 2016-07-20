@@ -1,11 +1,11 @@
 {
-  "name": "node-frontend",
+  "name": "hubba-academy-website",
   "engines": {
     "node": ">=0.10.0"
   },
   "private": true,
   "scripts": {
-    "test": "echo 'No test'"
+
   },
   "devDependencies": {
     "bower": "^1.5.2",
