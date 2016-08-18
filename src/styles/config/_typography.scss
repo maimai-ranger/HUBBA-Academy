@@ -1,6 +1,6 @@
 // Default fonts
-$fontDefault: Node, Helvetica, Arial, sans-serif;
-$fontHighlight: Node, Helvetica, sans-serif;
+$fontDefault: 'Sukhumvit Set', 'ThaiSansNeue', sans-serif;
+$fontHighlight: 'Sukhumvit Set', 'ThaiSansNeue', sans-serif;
 
 // Defining font sizes
 $fontSmall: 14px;
@@ -10,12 +10,12 @@ $fontLarge: 36px;
 $fontXLarge: 48px;
 
 @font-face {
-  font-family: 'Node';
-  src: url('../fonts/Titillium-Regular.otf');
+  font-family: 'ThaiSansNeue';
+  src: url('../fonts/ThaiSansNeue/OpenType/ThaiSansNeue-Regular.otf');
 }
 
 @font-face {
-  font-family: 'Node';
+  font-family: 'ThaiSansNeue';
   font-weight: bold;
-  src: url('../fonts/Titillium-Bold.otf');
+  src: url('../fonts/ThaiSansNeue/OpenType/ThaiSansNeue-Bold.otf');
 }

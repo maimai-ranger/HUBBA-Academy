@@ -33,7 +33,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('fonts', function () {
-    return gulp.src('src/fonts/*')
+    return gulp.src('src/fonts/**/*')
         .pipe(gulp.dest('public/fonts'))
         .pipe(size({
             title: 'fonts'
@@ -98,6 +98,7 @@ gulp.task('scripts-vendor', function () {
             'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
             'bower_components/angular-scroll/angular-scroll.min.js',
             'bower_components/angular-animate/angular-animate.min.js',
+            'bower_components/angular-simple-logger/dist/angular-simple-logger.min.js',
             'bower_components/angular-google-maps/dist/angular-google-maps.min.js',
             'bower_components/angulartics/dist/angulartics.min.js',
             'bower_components/angulartics-mixpanel/dist/angulartics-mixpanel.min.js',
